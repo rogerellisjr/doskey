@@ -1,0 +1,93 @@
+;= ::  http://technet.microsoft.com/en-us/library/bb490894.aspx
+;= ::  F7     = history
+;= ::  Alt+F7 = history -c
+;= ::  F8     = Ctrl+R
+;= ::  Use & to run multiple commands e.g.: command1 & command2
+
+
+
+;= :: Linux commands
+
+alias   = doskey $*
+cat     = type $*
+clear   = cls
+cp      = copy $*
+cpr     = xcopy $*
+grep    = find $*
+history = doskey /history
+kill    = taskkill /PID $*
+ls      = dir $*
+man     = help $*
+mv      = move $*
+ps      = tasklist $*
+pwd     = cd
+rm      = del $*
+rmr     = rd /s /q $*                          
+sudo    = runas /user:aridomain\rellis $1 $2              
+
+;=  Easier navigation
+;=  alias o      = start $*          
+;=  alias oo     = start .  
+
+..    = cd ..\$*
+...   = cd ..\..\$*
+....  = cd ..\..\..\$*
+..... = cd ..\..\..\..\$*
+
+
+
+
+dockerup=docker-compose up -d nginx mysql
+
+clear=cls
+ls=dir /B $1
+lss=dir /A $1
+pwd=echo %cd%
+touch=type nul > $1
+
+
+..2=cd ../..
+..3=cd ../../..
+dev=cd C:\Users\rellis\Projects
+
+cdd=cd /d $1
+
+vi=vim $1
+
+macros=vim C:\Users\rellis\macros.doskey
+
+
+
+
+;=   Laradock
+laraup=cd %userprofile%\Development\Laravel_Projects\laradock$tdocker-compose up -d nginx mysql
+laradown=cd %userprofile%\Development\Laravel_Projects\laradock$tdocker-compose stop nginx mysql
+
+;=   Workspace
+;=
+laraws=cd %userprofile%\Development\Laravel_Projects\laradock$tdocker-compose exec workspace bash
+larawsk=cd %userprofile%\Development\Laravel_Projects\laradock$tdocker-compose kill workspace
+larawsb=cd %userprofile%\Development\Laravel_Projects\laradock$tdocker-compose build workspace
+larawsu=cd %userprofile%\Development\Laravel_Projects\laradock$tdocker-compose up -d workspace
+
+;=   Nginx
+;=
+laranx=cd %userprofile%\Development\Laravel_Projects\laradock$tdocker-compose exec nginx bash
+laranxk=cd %userprofile%\Development\Laravel_Projects\laradock$tdocker-compose kill nginx
+laranxb=cd %userprofile%\Development\Laravel_Projects\laradock$tdocker-compose build nginx
+laranxu=cd %userprofile%\Development\Laravel_Projects\laradock$tdocker-compose up -d nginx
+
+;=   MySQL
+;=
+larams=cd %userprofile%\Development\Laravel_Projects\laradock$tdocker-compose exec mysql bash
+laramsk=cd %userprofile%\Development\Laravel_Projects\laradock$tdocker-compose kill mysql
+laramsb=cd %userprofile%\Development\Laravel_Projects\laradock$tdocker-compose build mysql
+laramsu=cd %userprofile%\Development\Laravel_Projects\laradock$tdocker-compose up -d mysql
+
+laradock=cd %userprofile%\Development\Laravel_Projects\laradock
+laradev=cd %userprofile%\Development\Laravel_Projects\laradock
+
+
+
+
+
